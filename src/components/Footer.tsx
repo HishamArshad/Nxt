@@ -12,7 +12,7 @@ const Footer = () => {
                 <h1>Home</h1>
                 <h1>About</h1>
                 <h1>Pricing</h1>
-                <h1>How it Works</h1>
+                <h1>How it Works Testing</h1>
             </div>
         </div>
     </footer>
