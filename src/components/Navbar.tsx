@@ -29,7 +29,7 @@ export default async function Navbar() {
             <ul className="flex justify-center items-center text-white gap-10 md:text-[1rem]">
                 <Link className="group transition duration-300" href='/'>Home<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-sky-600"></span></Link>
                 <Link className="group transition duration-300" href='/pricing'>Pricing<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-sky-600"></span></Link>
-                <Link className="group transition duration-300" href='/About'>About(Testing)<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-sky-600"></span></Link>
+                <Link className="group transition duration-300" href='/About'>About<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-sky-600"></span></Link>
                 <Link className="group transition duration-300" href='/howitworks'>How It Works<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-sky-600"></span></Link>
             </ul>
             <div>
