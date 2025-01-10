@@ -1,7 +1,6 @@
 "use client"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Toaster } from "@/components/ui/toaster"
+import { Label } from "@/components/ui/label" 
 import { Button } from "../ui/button"
 import { handleLogin, navigate } from "@/actions/actions"
  
@@ -9,10 +8,10 @@ import { useObservable, observer } from "@legendapp/state/react"
 import { useToast } from "@/hooks/use-toast" 
 import { clientStates } from "@/state/clientState" 
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
-import { z } from "zod";
+ 
 import { emailAndPasswordSchema } from "@/lib/zod"
-import { Result } from "postcss"
-
+import LoadingOverlay from "../LoadingOverlay"
+ 
 
 const Login = observer(() => {
      const { toast } = useToast()
@@ -22,7 +21,7 @@ const Login = observer(() => {
       passwordErrors: [], // Store multiple errors for password
       pen: false,
       redir: false
-  })
+  }) 
   const clearErrors = () => {
     setTimeout(() => {
         res.emailErrors.set([])
@@ -56,6 +55,8 @@ const Login = observer(() => {
       }
 
         try{
+          clientStates.isLoad.set(true)
+        
           res.pen.set(true)
             const result = await handleLogin(formData)
              res.token.set(result.token)
@@ -67,7 +68,7 @@ const Login = observer(() => {
               })
               res.pen.set(false)
               res.redir.set(true)
-              const path = "/dashboard"
+              const path = "dashboard"
               navigate(path)
         } catch (error) {
             toast({
@@ -76,6 +77,8 @@ const Login = observer(() => {
          
               })
               res.pen.set(false)
+        } finally {
+          clientStates.isLoad.set(false)
         }
     }
   
@@ -83,8 +86,7 @@ const Login = observer(() => {
     <form
     action={handleResponse}
     >
-        
-        <Toaster />
+          <LoadingOverlay  />
          <div className="grid gap-6">
          {res.emailErrors.get() && (
                         <div className="text-sm text-red-600 font-medium">

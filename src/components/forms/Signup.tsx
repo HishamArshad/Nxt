@@ -1,17 +1,14 @@
 "use client"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Toaster } from "@/components/ui/toaster"
+import { Label } from "@/components/ui/label" 
 import { Button } from "../ui/button"
-import { handleSignup } from "@/actions/actions"
-import { useFormStatus } from "react-dom"
+import { handleSignup } from "@/actions/actions" 
 import { useObservable, observer } from "@legendapp/state/react"
 import { useToast } from "@/hooks/use-toast" 
 import { clientStates } from "@/state/clientState" 
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 const Signup = observer(() => {
-    const { toast } = useToast()
-    const {pending} = useFormStatus()
+    const { toast } = useToast() 
     const res = useObservable({token: "" , err: "", detail: "", pen: false})
     const handleResponse = async (formData) => {
         try{
@@ -39,8 +36,7 @@ const Signup = observer(() => {
     <form
     action={handleResponse}
     >
- 
-        <Toaster />
+  
          <div className="grid gap-6">
             <div className="flex flex-col">
             <div className="grid gap-2">

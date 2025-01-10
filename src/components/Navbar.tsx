@@ -1,20 +1,19 @@
 import Image from "next/image"; 
  
- 
 import Hammenue from "./Hammenue";
 import Link from "next/link";    
  
-import LoginSwitch from './LogSwitch' 
+import LoginSwitch from './LogSwitch'  
 export default async function Navbar() {
  
  
   return (
     
       <nav
-        className="sticky top-0 bg-[#1F1F1F] z-50 transition-all duration-300 ease-in-out transform"
+        className="sticky top-0 bg-[#1F1F1F] border-b-2 border-[#ffffff] backdrop-blur-3xl z-50 transition-all duration-300 ease-in-out transform"
         id="navbar"
       >
- 
+     
         <div className="flex justify-between items-center px-3 py-2 container mx-auto">
         <Link href="/" className="md:hidden">
 

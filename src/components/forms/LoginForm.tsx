@@ -10,6 +10,7 @@ import {
 import Login from "./Login"
 import SocialBtn from  "../SocialBtn"
 import Link from "next/link"
+import LoadingOverlay from "../LoadingOverlay"
  
 
 
@@ -19,6 +20,8 @@ export function LoginForm({
 }: React.ComponentPropsWithoutRef<"div">) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
+      
+      <LoadingOverlay  />
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Welcome back</CardTitle>

@@ -8,7 +8,7 @@ import {
   Command,
 
   GalleryVerticalEnd,
- 
+  Crosshair,
   PieChart,
   Settings2,
   SquareTerminal,
@@ -35,9 +35,9 @@ const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
+      name: "Track&Manage",
+      logo: Crosshair,
+      plan: "Basic",
     },
     {
       name: "Acme Corp.",
@@ -53,13 +53,13 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard/overview",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
           title: "Overview",
-          url: "#",
+          url: "/dashboard/overview",
         },
         // {
         //   title: "Starred",
@@ -77,8 +77,8 @@ const data = {
       icon: Bot,
       items: [
         {
-          title: "Genesis",
-          url: "#",
+          title: "Overview",
+          url: "/dashboard/expense",
         },
         {
           title: "Explorer",

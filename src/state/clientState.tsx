@@ -3,7 +3,7 @@ import { ObservablePersistLocalStorage } from "@legendapp/state/persist-plugins/
 import { synced } from '@legendapp/state/sync'
 import { observable, syncState} from "@legendapp/state"; 
 
-export const clientStates = syncState(observable(synced({token: ""})))
+export const clientStates = syncState(observable(synced({token: "", isLoad: false})))
  
 
 
